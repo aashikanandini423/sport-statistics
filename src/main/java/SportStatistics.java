@@ -1,8 +1,9 @@
-
 import java.nio.file.Paths;
-import java.util.ArrayList;
 import java.util.Scanner;
 
+/**
+ * Driver class for Statiustics
+ */
 public class SportStatistics {
 
     public static void main(String[] args) {
@@ -10,8 +11,6 @@ public class SportStatistics {
         System.out.println("File:");
         String file = scan.nextLine();
         while(true){
-            
-        
             System.out.println("Team:");
             String team = scan.nextLine();
             if(team.equals("stop")){
@@ -45,15 +44,13 @@ public class SportStatistics {
                             losses++;
                         }
                     }
-           
-            
+                }
+                System.out.println("Games: "+noOfGames);
+                System.out.println("Wins: "+wins);
+                System.out.println("Losses: "+losses);
+            } catch(Exception e){
+                System.out.println("File not found!!!");
             }
-            System.out.println("Games: "+noOfGames);
-            System.out.println("Wins: "+wins);
-            System.out.println("Losses: "+losses);
-        }catch(Exception e){
-            System.out.println("File not found!!!");
-        }    
         }
         
     }
